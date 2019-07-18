@@ -2,30 +2,40 @@
 // WINDOW ON-LOAD
 //////////////////
 $(() => {
+  const $giphyContainer = $('.giphy-container');
 
   $('form').on('submit', (event) => {
      event.preventDefault();
      const userInput = $('input[type="text"]').val();
-       $.ajax({
-         type: "GET",
-         url: "https://developers.zomato.com/api/v2.1/locations?query=" +userInput,
-         headers: {
-           "user-key": "cdee9b3e88812b0fe7cb859da0da336c",
-         },
-       }).then(
-         (data) => {
-           console.log(data.location_suggestions[0].title);
-         },
-         (error) => {
-           console.log('error');
-         }
-       );//end ajax
+       var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=" + userInput + "&api_key=4F8CbsHhFuP1xZW9n4KwCrPEz4uCS9x0&limit=1");
+       xhr.done(function(data) {
+         const $video = $('<video>').attr({'src': data['data'][0].images.looping.mp4, 'type': "video/mp4"})
+         $giphyContainer.append($video);
+         console.log(data['data'][0].images.looping.mp4);
+       });
   }); //end listener
 
-
-
-
-
-
-
 }) //end window on-load
+
+
+
+//      $.ajax({
+//        type: "GET",
+//        url: 'https://api.twitter.com/1.1/search/tweets.json?q=from%3Atwitterdev&result_type=mixed&count=2',
+//        headers: {
+//          'authorization': 'OAuth oauth_consumer_key="consumer-key-for-app"',
+//          'oauth_nonce': "generated-nonce",
+//          'oauth_signature': "generated-signature",
+//          'oauth_signature_method': "HMAC-SHA1",
+//          'oauth_timestamp': "generated-timestamp",
+//          'oauth_token': "access-token-for-authed-user", 'oauth_version': "1.0"
+//        },
+//      }).then(
+//        (data) => {
+//          // console.log(data.location_suggestions[0].title);
+//          console.log(data);
+//        },
+//        (error) => {
+//          console.log('error');
+//        }
+//      );//end ajax
