@@ -5,34 +5,67 @@ $(() => {
   //global variables
   const $giphyContainer = $('.giphy-container');
   const giphyArray = [];
-  let currentGifIndex = 0;
+  // const djArray = [];
 
   // form is filled out and submitted
   $('form').on('submit', (event) => {
-     event.preventDefault();
+    event.preventDefault();
      //user input stored in variable
-     const userInput = $('input[type="text"]').val();
-      //ajax call
-       var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=" + userInput + "&api_key=4F8CbsHhFuP1xZW9n4KwCrPEz4uCS9x0&limit=5");
+    let userInput = $('input[type="text"]').val();
+    //ajax call
+    if (userInput == '') {
+      //pulls dj khaled gifs
+      var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=DJ+KHALED&api_key=4F8CbsHhFuP1xZW9n4KwCrPEz4uCS9x0&limit=20");
+      xhr.done(function(data) {
+        for (let i = 0; i < "data".length; i++) {
+          const $img = $('<img>').attr({'src': data['data'][i].images.original.url}).addClass('gif');
+          giphyArray.push($img);
+          $giphyContainer.append($img);
+          $img.hide(); //hides all images
+        } // end for loop
+         giphyArray[0].show(); // shows first image
+         showImage();
+       });//end ajax
+      } else {
+       var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=" + userInput + "&api_key=4F8CbsHhFuP1xZW9n4KwCrPEz4uCS9x0&limit=20");
        xhr.done(function(data) {
          for (let i = 0; i < "data".length; i++) {
            const $img = $('<img>').attr({'src': data['data'][i].images.original.url}).addClass('gif');
            giphyArray.push($img)
-           // $giphyContainer.append($img);
-          }
+           $giphyContainer.append($img);
+           $img.hide(); //hides all images
+         } // end for loop
+          giphyArray[0].show(); // shows first image
           showImage();
         });//end ajax
-
-    $('input[type="text"]').val('') //clears input value
+      $('input[type="text"]').val('') //clears input value
+    } // end else statement
   }); //end listener
 
   //shows first image in result, appends next button
   const showImage = () => {
-    let $currentGif = giphyArray[0];
-    $giphyContainer.append($currentGif);
-    const $nextButton = $('<button>').text('anotha\' one');
+    let currentGifIndex = 0;
+    let $currentGif = giphyArray[currentGifIndex];
+    // $giphyContainer.append($currentGif);
+    //next button
+    const $nextButton = $('<button>').text('anotha\' one').addClass('next-button');
     $giphyContainer.append($nextButton);
+    //next button listener
+    $('.next-button').on('click', (event) => {
+      $currentGif.hide();
+      if(currentGifIndex < giphyArray.length-1){
+        currentGifIndex++;
+      } else {
+        currentGifIndex = 0;
+      }
+      $currentGif = giphyArray[currentGifIndex];
+      console.log($currentGif);
+      console.log(giphyArray);
+      console.log(currentGifIndex);
+      $currentGif.show();
+    })
+  };
 
-  }
+
 
 }); //end window on-load
