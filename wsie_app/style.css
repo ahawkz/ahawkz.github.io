@@ -1,8 +1,17 @@
+/* general */
 body {
   margin: 0 auto;
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
+/* header */
+
+h1 {
+  text-transform: uppercase;
+}
+
+/* giphy container */
 .giphy-container {
   display: flex;
   flex-wrap: wrap;
