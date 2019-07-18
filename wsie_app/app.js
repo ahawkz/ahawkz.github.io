@@ -9,9 +9,8 @@ $(() => {
      const userInput = $('input[type="text"]').val();
        var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=" + userInput + "&api_key=4F8CbsHhFuP1xZW9n4KwCrPEz4uCS9x0&limit=1");
        xhr.done(function(data) {
-         const $video = $('<video>').attr({'src': data['data'][0].images.looping.mp4, 'type': "video/mp4"})
-         $giphyContainer.append($video);
-         console.log(data['data'][0].images.looping.mp4);
+         const $img = $('<img>').attr({'src': data['data'][0].images.original.url})
+         $giphyContainer.append($img);
        });
   }); //end listener
 
