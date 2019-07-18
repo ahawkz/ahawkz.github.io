@@ -5,6 +5,7 @@ $(() => {
   //global variables
   const $giphyContainer = $('.giphy-container');
   const giphyArray = [];
+  // let currentGif =
 
   // form is filled out and submitted
   $('form').on('submit', (event) => {
@@ -19,8 +20,14 @@ $(() => {
            giphyArray.push($img)
            // $giphyContainer.append($img);
           }
+          showImage();
         });//end ajax
-     $('input[type="text"]').val('') //clears input value
+
+    $('input[type="text"]').val('') //clears input value
   }); //end listener
+
+  const showImage = () => {
+    $giphyContainer.append(giphyArray[0]);
+  }
 
 }); //end window on-load
