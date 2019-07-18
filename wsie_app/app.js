@@ -4,15 +4,23 @@
 $(() => {
   const $giphyContainer = $('.giphy-container');
 
+  // form is filled out and submitted
   $('form').on('submit', (event) => {
      event.preventDefault();
+     //user input stored in variable
      const userInput = $('input[type="text"]').val();
-       var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=" + userInput + "&api_key=4F8CbsHhFuP1xZW9n4KwCrPEz4uCS9x0&limit=1");
+      //ajax call
+       var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=" + userInput + "&api_key=4F8CbsHhFuP1xZW9n4KwCrPEz4uCS9x0&limit=5");
        xhr.done(function(data) {
-         const $img = $('<img>').attr({'src': data['data'][0].images.original.url})
-         $giphyContainer.append($img);
+         for (let i = 0; i < "data".length; i++) {
+           const $img = $('<img>').attr({'src': data['data'][i].images.original.url})
+           $giphyContainer.append($img);
+        }
        });
+     $('input[type="text"]').val('')
   }); //end listener
+
+
 
 }) //end window on-load
 
