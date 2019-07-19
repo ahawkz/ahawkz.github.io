@@ -5,11 +5,17 @@ $(() => {
   //global variables
   const $giphyContainer = $('.giphy-container');
   const $buttonContainer = $('.button-container');
-  const giphyArray = [];
+  let giphyArray = [];
 
   // form is filled out and submitted
-  $('form').one('submit', (event) => {
+  $('form').on('submit', (event) => {
     event.preventDefault();
+    $('img').remove();
+    $buttonContainer.empty();
+    giphyArray = [];
+    console.log(giphyArray);
+    // $giphyContainer.children().eq(0).show();
+
      //user input stored in variable
     let userInput = $('input[type="text"]').val();
     //ajax call
@@ -48,7 +54,6 @@ $(() => {
   const showImage = () => {
     let currentGifIndex = 0;
     let $currentGif = giphyArray[currentGifIndex];
-    // $giphyContainer.append($currentGif);
     //next button
     const $nextButton = $('<button>').text('anotha\' one').addClass('next-button');
     $buttonContainer.append($nextButton);
@@ -68,5 +73,10 @@ $(() => {
     })
   };
 
+//quiz pop-up -- dj khalid catchphrases
+//pops up after 2 minutes on the site
+  // 'seems like you're really enjoying these gifs. and perhaps you know a thing about DJ Khalid. Shall we test your knowledge?'
+    //if yes, begin quiz
+    //if no, exit modal
 
 }); //end window on-load
