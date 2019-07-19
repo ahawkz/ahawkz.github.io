@@ -5,17 +5,17 @@ body {
   margin: 0 auto;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
+  background-color: #f0f1f2;
 }
 
 /* header and form */
-
 h1 {
+  margin-top: 40px;
   text-transform: uppercase;
   background: -webkit-linear-gradient(#eee, #3e9ab2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   /* gradient code inspired by W3S */
-  text-shadow: 1px 1px 1px #3e9ab2;
 }
 p {
   display: inline-block;
@@ -24,29 +24,27 @@ input {
   width: 250px;
   height: 40px;
   margin-right: 20px;
+  border: 1px solid #e6e15a;
   /* text-align: center; */
   font-size: 15px;
   text-transform: uppercase;
-
 }
 #gif-me {
   background-color: #3e9ab2;
   border:none;
   border-radius: 2px;
   color: white;
-  box-shadow: 2px 2px 4px black;
+  box-shadow: 2px 2px 4px #9cb4ba;
   padding: 12px 20px;
   font-size: 15px;
-
   text-align: center;
-  text-decoration: none;
   display: inline-block;
-
   cursor: grab;
   /* animation */
 }
 #gif-me.hover{
-  background-color:
+  background-color: #eee;
+  text-transform: uppercase;
 }
 
 /* giphy container */
@@ -57,7 +55,6 @@ input {
   width: 400px;
   margin: 20px auto;
 }
-
 img {
   display: flex;
   flex-wrap: wrap;
@@ -65,7 +62,18 @@ img {
   padding: 10px;
   width: 80%;
 }
-
+.next-button {
+  background-color: #9cb4ba;
+  border:none;
+  border-radius: 2px;
+  color: white;
+  box-shadow: 2px 2px 4px #9cb4ba;
+  padding: 8px 30px;
+  font-size: 12px;
+  text-align: center;
+  display: inline-block;
+  cursor: grab;
+}
 
 /* ====== DESKTOP ===== */
 
