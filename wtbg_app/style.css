@@ -1,6 +1,10 @@
 /* ====== MOBILE ===== */
 
 /* general */
+* {
+  border: 1px solid gold;
+}
+
 body {
   margin: 0 auto;
   text-align: center;
@@ -42,9 +46,12 @@ input {
   cursor: grab;
   /* animation */
 }
-#gif-me.hover{
-  background-color: #eee;
+#gif-me:hover {
+  background-color: #9cb4ba;
   text-transform: uppercase;
+}
+#gif-me:active {
+  outline: none;
 }
 
 /* giphy container */
@@ -53,7 +60,7 @@ input {
   flex-wrap: wrap;
   justify-content: center;
   width: 400px;
-  margin: 20px auto;
+  margin: 40px auto;
 }
 img {
   display: flex;
@@ -71,8 +78,12 @@ img {
   padding: 8px 30px;
   font-size: 12px;
   text-align: center;
+  text-transform: uppercase;
   display: inline-block;
   cursor: grab;
+}
+.next-button:hover {
+  background-color: #3e9ab2;
 }
 
 /* ====== DESKTOP ===== */
