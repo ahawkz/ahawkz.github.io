@@ -99,7 +99,7 @@ hr {
 
 /* ====== DESKTOP ===== */
 
-@media (min-width: 600px) {
+@media (min-width: 1900px) {
   body {
     background-color: ghostwhite;
   }
