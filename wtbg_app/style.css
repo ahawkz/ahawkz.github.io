@@ -53,6 +53,9 @@ input {
 #gif-me:active {
   outline: none;
 }
+#gif-me:focus {
+  outline: none;
+}
 
 /* giphy container */
 .giphy-container {
@@ -84,6 +87,9 @@ img {
 }
 .next-button:hover {
   background-color: #3e9ab2;
+}
+.next-button:focus {
+  outline: none;
 }
 
 /* ====== DESKTOP ===== */
