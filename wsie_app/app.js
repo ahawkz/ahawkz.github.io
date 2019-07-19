@@ -4,6 +4,7 @@
 $(() => {
   //global variables
   const $giphyContainer = $('.giphy-container');
+  const $buttonContainer = $('.button-container');
   const giphyArray = [];
 
   // form is filled out and submitted
@@ -50,7 +51,7 @@ $(() => {
     // $giphyContainer.append($currentGif);
     //next button
     const $nextButton = $('<button>').text('anotha\' one').addClass('next-button');
-    $giphyContainer.append($nextButton);
+    $buttonContainer.append($nextButton);
     //next button listener
     $('.next-button').on('click', (event) => {
       $currentGif.hide();
