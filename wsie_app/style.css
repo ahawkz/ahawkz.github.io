@@ -1,3 +1,5 @@
+/* ====== MOBILE ===== */
+
 /* general */
 body {
   margin: 0 auto;
@@ -5,10 +7,46 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* header */
+/* header and form */
 
 h1 {
   text-transform: uppercase;
+  background: -webkit-linear-gradient(#eee, #3e9ab2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* gradient code inspired by W3S */
+  text-shadow: 1px 1px 1px #3e9ab2;
+}
+p {
+  display: inline-block;
+}
+input {
+  width: 250px;
+  height: 40px;
+  margin-right: 20px;
+  /* text-align: center; */
+  font-size: 15px;
+  text-transform: uppercase;
+
+}
+#gif-me {
+  background-color: #3e9ab2;
+  border:none;
+  border-radius: 2px;
+  color: white;
+  box-shadow: 2px 2px 4px black;
+  padding: 12px 20px;
+  font-size: 15px;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+  cursor: grab;
+  /* animation */
+}
+#gif-me.hover{
+  background-color:
 }
 
 /* giphy container */
@@ -21,5 +59,18 @@ h1 {
 }
 
 img {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   padding: 10px;
+  width: 80%;
 }
+
+
+/* ====== DESKTOP ===== */
+
+@media (min-width: 600px) {
+  body {
+    background-color: green;
+  }
+ }
