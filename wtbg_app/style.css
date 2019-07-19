@@ -96,6 +96,20 @@ img {
 
 @media (min-width: 600px) {
   body {
-    background-color: gray;
+    background-color: ghostwhite;
+  }
+  .container {
+    border: 2px solid #3e9ab2;
+    border-radius: 5px;
+    margin: 50px auto;
+    width: 70%;
+    height: 750px;
+    background-color: #f0f1f2;
+  }
+  footer {
+    font-size: 12px;
+  }
+  hr {
+    width: 50px;
   }
  }
