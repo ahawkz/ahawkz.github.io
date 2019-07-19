@@ -15,7 +15,7 @@ $(() => {
     //ajax call
     if (userInput == '') {
       //pulls dj khaled gifs
-      var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=DJ+KHALED&api_key=4F8CbsHhFuP1xZW9n4KwCrPEz4uCS9x0&limit=20");
+      var xhr = $.get("https://api.giphy.com/v1/gifs/search?q=DJ+KHALED&api_key=4F8CbsHhFuP1xZW9n4KwCrPEz4uCS9x0&limit=20");
       xhr.done(function(data) {
         for (let i = 0; i < data.data.length; i++) {
           const $img = $('<img>').attr({'src': data['data'][i].images.original.url}).addClass('gif');
@@ -28,7 +28,7 @@ $(() => {
        });//end ajax
     //when user inputs info
     } else {
-       var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=" + userInput + "&api_key=4F8CbsHhFuP1xZW9n4KwCrPEz4uCS9x0&limit=20");
+       var xhr = $.get("https://api.giphy.com/v1/gifs/search?q=" + userInput + "&api_key=4F8CbsHhFuP1xZW9n4KwCrPEz4uCS9x0&limit=20");
        xhr.done(function(data) {
          for (let i = 0; i < data.data.length; i++) {
            const $img = $('<img>').attr({'src': data['data'][i].images.original.url}).addClass('gif');
