@@ -104,6 +104,40 @@ img {
 .next-button:focus {
   outline: none;
 }
+/* MODAL */
+.modal {
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	overflow: auto;
+	display: none;
+}
+#modal-textbox {
+	background: white;
+	padding: 3%;
+	height: 350px;
+	width: 60%;
+	border-radius: 2px;
+	margin: 150px auto;
+	box-shadow: 2px 4px 2px rgba(0,0,0,0.2)s
+	/* line-height: 10%; */
+}
+#close {
+	padding: 8px 10px;
+	background-color: #9cb4ba;
+	text-decoration: none;
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	color: white;
+  top: 0;
+  right: 0;
+}
+/* FOOTER  */
 footer {
   font-size: 12px;
   background: ghostwhite;

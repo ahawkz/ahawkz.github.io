@@ -6,6 +6,7 @@ $(() => {
   const $giphyContainer = $('.giphy-container');
   const $buttonContainer = $('.button-container');
   let giphyArray = [];
+  const $modal = $('.modal');
 
   // form is filled out and submitted
   $('form').on('submit', (event) => {
@@ -75,6 +76,17 @@ $(() => {
 
 //quiz pop-up -- dj khalid catchphrases
 //pops up after 2 minutes on the site
+//modal pop-up
+  const openModal = () => {
+    $modal.show();
+  }
+
+  //close MODAL
+  $('#close').on('click', () => {
+    $modal.hide();
+  })
+
+  openModal();
   // 'seems like you're really enjoying these gifs. and perhaps you know a thing about DJ Khalid. Shall we test your knowledge?'
     //if yes, begin quiz
     //if no, exit modal
