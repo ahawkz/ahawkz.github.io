@@ -75,18 +75,18 @@ $(() => {
   };
 
 //quiz pop-up -- dj khalid catchphrases
-//pops up after 2 minutes on the site
-//modal pop-up
+//open modal
   const openModal = () => {
     $modal.show();
   }
+  //pops up after 2 seconds on the site -- CHANGE THIS!
+  setTimeout(openModal, 2000);
 
   //close MODAL
   $('#close').on('click', () => {
     $modal.hide();
   })
 
-  openModal();
   // 'seems like you're really enjoying these gifs. and perhaps you know a thing about DJ Khalid. Shall we test your knowledge?'
     //if yes, begin quiz
     //if no, exit modal
