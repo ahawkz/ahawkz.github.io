@@ -3,7 +3,12 @@ body {
   margin: 0 auto;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
-  background-color: #f0f1f2;
+  /* background-color: #f0f1f2; */
+  background-color: ghostwhite;
+  background-image: url(images/key.png);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 100px 75px;
 }
 
 /* header and form */
@@ -55,6 +60,12 @@ input {
   margin: 0 auto;
   width: 80%;
   height: 800px;
+  border: 2px solid #3e9ab2;
+  border-radius: 5px;
+  margin: 50px auto;
+  /* width: 70%;
+  height: 750px; */
+  background-color: #f0f1f2;
 }
 /* giphy container */
 .giphy-container {
