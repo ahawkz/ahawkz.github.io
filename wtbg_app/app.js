@@ -75,7 +75,7 @@ $(() => {
   // QUIZ
   //////////
 
-  //quiz pop-up -- dj khalid catchphrases
+  //quiz pop-up -- dj khaled catchphrases
   //open modal
     const openModal = () => {
       $modal.show();
@@ -105,17 +105,17 @@ $(() => {
     $('#modal-textbox').append($question);
     $questionsDiv = $('<div>').addClass('questions-container');
     $('#modal-textbox').append($questionsDiv);
-    $optionA = $('<button>').text('Anotha One').attr('id', 'option-1-1')
-    $optionB = $('<button>').text('Roger That').attr('id', 'option-1-2');
+    $optionA = $('<button>').text('Anotha One').attr('id', 'option-1')
+    $optionB = $('<button>').text('Roger That').attr('id', 'option-2');
     $questionsDiv.append($optionA);
     $questionsDiv.append($optionB);
     //when option 1 is clicked
-    $('#option-1-1').on('click', () => {
+    $('#option-1').on('click', () => {
       totalScore++;
       questionTwo();
     })
     //when option 2 is clicked
-    $('#option-1-2').on('click', () => {
+    $('#option-2').on('click', () => {
         questionTwo();
     })
   };
@@ -129,17 +129,17 @@ $(() => {
       $('#modal-textbox').append($question);
     $questionsDiv = $('<div>').addClass('questions-container');
       $('#modal-textbox').append($questionsDiv);
-    $optionA = $('<button>').text('Bless Up').attr('id', 'option-2-1')
-    $optionB = $('<button>').text('Bless Down').attr('id', 'option-2-2');
+    $optionA = $('<button>').text('Bless Up').attr('id', 'option-1')
+    $optionB = $('<button>').text('Bless Down').attr('id', 'option-2');
       $questionsDiv.append($optionA);
       $questionsDiv.append($optionB);
     //when option 1 is clicked
-    $('#option-2-1').on('click', () => {
+    $('#option-1').on('click', () => {
       totalScore++;
       questionThree();
     })
     //when option 2 is clicked
-    $('#option-2-2').on('click', () => {
+    $('#option-2').on('click', () => {
       questionThree();
     })
   };
@@ -153,16 +153,16 @@ $(() => {
       $('#modal-textbox').append($question);
     $questionsDiv = $('<div>').addClass('questions-container');
       $('#modal-textbox').append($questionsDiv);
-    $optionA = $('<button>').text('Hakuna Matata').attr('id', 'option-3-1')
-    $optionB = $('<button>').text('Major Key').attr('id', 'option-3-2');
+    $optionA = $('<button>').text('Hakuna Matata').attr('id', 'option-1')
+    $optionB = $('<button>').text('Major Key').attr('id', 'option-2');
       $questionsDiv.append($optionA);
       $questionsDiv.append($optionB);
     //when option 1 is clicked
-    $('#option-3-1').on('click', () => {
+    $('#option-1').on('click', () => {
       questionFour();
     })
     //when option 2 is clicked
-    $('#option-3-2').on('click', () => {
+    $('#option-2').on('click', () => {
       totalScore++;
       questionFour();
     })
@@ -177,16 +177,16 @@ $(() => {
       $('#modal-textbox').append($question);
     $questionsDiv = $('<div>').addClass('questions-container');
       $('#modal-textbox').append($questionsDiv);
-    $optionA = $('<button>').text('#WinOrLose').attr('id', 'option-4-1')
-    $optionB = $('<button>').text('#WeTheBest').attr('id', 'option-4-2');
+    $optionA = $('<button>').text('#WinOrLose').attr('id', 'option-1')
+    $optionB = $('<button>').text('#WeTheBest').attr('id', 'option-2');
       $questionsDiv.append($optionA);
       $questionsDiv.append($optionB);
     //when option 1 is clicked
-    $('#option-4-1').on('click', () => {
+    $('#option-1').on('click', () => {
       questionFive();
     })
     //when option 2 is clicked
-    $('#option-4-2').on('click', () => {
+    $('#option-2').on('click', () => {
       totalScore++;
       questionFive();
     })
@@ -201,17 +201,17 @@ $(() => {
       $('#modal-textbox').append($question);
     $questionsDiv = $('<div>').addClass('questions-container');
       $('#modal-textbox').append($questionsDiv);
-    $optionA = $('<button>').text('Win Win Win No Matter What').attr('id', 'option-5-1')
-    $optionB = $('<button>').text('I\'ll Never Change').attr('id', 'option-5-2');
+    $optionA = $('<button>').text('Win Win Win No Matter What').attr('id', 'option-1')
+    $optionB = $('<button>').text('I\'ll Never Change').attr('id', 'option-2');
       $questionsDiv.append($optionA);
       $questionsDiv.append($optionB);
     //when option 1 is clicked
-    $('#option-5-1').on('click', () => {
+    $('#option-1').on('click', () => {
       totalScore++;
       finalScore();
     })
     //when option 2 is clicked
-    $('#option-5-2').on('click', () => {
+    $('#option-2').on('click', () => {
       finalScore();
     })
   }
@@ -256,23 +256,5 @@ $(() => {
   $('#close').on('click', () => {
     $modal.hide();
   })
-
-  // modal pop-up
-    //if user clicks to begin quiz, then
-      // clear current text from modal, keep x in top corner
-      //replace with the following text:
-        // "Which phrases below are famous DJK phrases?"
-          // option a
-            // if option a is chosen, add one point to final score
-          // option b
-            // if option b is chosen, add no points to final score
-          // repeat this 4 more times
-        // if final score = 5, user gets 100%
-          // if final score = 4, user gets 80%
-          // if final score = 3, user gets 60%
-          // if final score = 2, user gets 40%
-          // if final score = 1, user gets 20%
-          // if final score = 0, sorry, looks like  you don't know a thing about DJ K!
-    //if no, click x to exit modal
 
 }); //end window on-load
