@@ -2,6 +2,11 @@
 // WINDOW ON-LOAD
 //////////////////
 $(() => {
+
+  /////////
+  // GIFS
+  /////////
+
   //global variables
   const $giphyContainer = $('.giphy-container');
   const $buttonContainer = $('.button-container');
@@ -74,24 +79,26 @@ $(() => {
   //////////
   // QUIZ
   //////////
+  let totalScore = 0;
+  $('.modal').hide();
 
-  //quiz pop-up -- dj khaled catchphrases
+  // WHY IS THIS POPPING UP RIGHT AWAY?
   //open modal
-    const openModal = () => {
-      $modal.show();
-    }
-    //pops up after 2 seconds on the site -- CHANGE THIS TO 2 MINUTES!
-    setTimeout(openModal, 1000);
+  const openModal = () => {
+    $('.modal').show();
+  }
 
-    //if user clicks to begin quiz
+  //pops up after 5 seconds on the site -- CHANGE THIS TO 2 MINUTES!
+  setTimeout(openModal, 125000);
+
+  //if user clicks to begin quiz
   $('#take-quiz-button').on('click', () => {
     //hide opening text
     $('.opening-modal-text').remove();
     beginQuiz();
   })
 
-  let totalScore = 0;
-
+  //begin quiz
   const beginQuiz = () => {
     //replace with new modal text
     $newQuizText = $('<h3>').text('Which phrases below are famous DJ Khaled catchphrases?').css('color', 'black');
@@ -254,7 +261,7 @@ $(() => {
 
   //to close MODAL
   $('#close').on('click', () => {
-    $modal.hide();
+    $('.modal').hide();
   })
 
 }); //end window on-load
