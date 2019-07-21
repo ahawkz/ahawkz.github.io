@@ -80,7 +80,7 @@ $(() => {
     $modal.show();
   }
   //pops up after 2 seconds on the site -- CHANGE THIS!
-  setTimeout(openModal, 2000);
+  setTimeout(openModal, 1000);
 
   //close MODAL
   $('#close').on('click', () => {

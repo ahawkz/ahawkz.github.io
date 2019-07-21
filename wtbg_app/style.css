@@ -114,7 +114,9 @@ img {
 	width: 100%;
 	z-index: 1;
 	overflow: auto;
-	display: none;
+  display: flex;
+  justify-content: center;
+
 }
 #modal-textbox {
 	background: white;
@@ -128,16 +130,20 @@ img {
 }
 #close {
 	padding: 8px 10px;
+  width: 10px;
+  margin: 0;
 	background-color: #9cb4ba;
 	text-decoration: none;
 	border: none;
 	outline: none;
 	border-radius: 3px;
 	color: white;
-  top: 0;
-  right: 0;
+  /* positioning */
+  position: fixed;
+  top: 150px;
+  right: 17%;
 }
-/* FOOTER  */
+/* FOOTER */
 footer {
   font-size: 12px;
   background: ghostwhite;
