@@ -225,7 +225,7 @@ $(() => {
         $finalText = $('<p>').text('You scored 100%, congrats!')
           $('#modal-textbox').append($finalText);
       } else if(totalScore === 4){
-        $newQuizText = $('<h3>').text('You almost got  it.').css('color', 'black');
+        $newQuizText = $('<h3>').text('You almost got it.').css('color', 'black');
           $('#modal-textbox').append($newQuizText);
         $finalText = $('<p>').text('You scored 80%!')
           $('#modal-textbox').append($finalText);
@@ -251,7 +251,6 @@ $(() => {
           $('#modal-textbox').append($finalText);
       }
   };
-
 
   //to close MODAL
   $('#close').on('click', () => {
