@@ -67,9 +67,6 @@ $(() => {
         currentGifIndex = 0;
       }
       $currentGif = giphyArray[currentGifIndex];
-      // // console.log($currentGif);
-      // // console.log(giphyArray);
-      // // console.log(currentGifIndex);
       $currentGif.show();
     })
   };
@@ -79,16 +76,27 @@ $(() => {
   const openModal = () => {
     $modal.show();
   }
-  //pops up after 2 seconds on the site -- CHANGE THIS!
+  //pops up after 2 seconds on the site -- CHANGE THIS TO 2 MINUTES!
   setTimeout(openModal, 1000);
 
-  //close MODAL
+  //if user clicks to begin quiz
+$('#take-quiz-button').on('click', () => {
+  //hide opening text
+  $('.opening-modal-text').empty();
+  beginQuiz();
+})
+
+const beginQuiz = () => {
+  
+}
+
+  //to close MODAL
   $('#close').on('click', () => {
     $modal.hide();
   })
 
   // modal pop-up
-    //if yes, begin quiz
+    //if user clicks to begin quiz, then
       // clear current text from modal, keep x in top corner
       //replace with the following text:
         // "Which phrases below are famous DJK phrases?"
