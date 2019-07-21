@@ -99,33 +99,158 @@ $(() => {
     showFirstQuestion();
   };
 
+  //question one
   const showFirstQuestion = () => {
-    $firstQuestion = $('<p>').text('\"Anotha One\" or \"Roger That\"');
-    $('#modal-textbox').append($firstQuestion);
+    $question = $('<p>').text('\"Anotha One\" or \"Roger That\"');
+    $('#modal-textbox').append($question);
     $questionsDiv = $('<div>').addClass('questions-container');
     $('#modal-textbox').append($questionsDiv);
     $optionA = $('<button>').text('Anotha One').attr('id', 'option-1-1')
     $optionB = $('<button>').text('Roger That').attr('id', 'option-1-2');
     $questionsDiv.append($optionA);
     $questionsDiv.append($optionB);
+    //when option 1 is clicked
     $('#option-1-1').on('click', () => {
-      console.log('option 1 clicked');
       totalScore++;
       questionTwo();
     })
-
+    //when option 2 is clicked
     $('#option-1-2').on('click', () => {
-      console.log('option 2 clicked');
         questionTwo();
     })
   };
 
+  //question two
   const questionTwo = () => {
-    $('.opening-modal-text').remove();
-    console.log('question two')
-    console.log(totalScore);
+    $('#modal-textbox').empty();
+    $newQuizText = $('<h3>').text('Which phrases below are famous DJ Khaled catchphrases?').css('color', 'black');
+      $('#modal-textbox').append($newQuizText);
+    $question = $('<p>').text('\"Bless Up\" or \"Bless Down\"');
+      $('#modal-textbox').append($question);
+    $questionsDiv = $('<div>').addClass('questions-container');
+      $('#modal-textbox').append($questionsDiv);
+    $optionA = $('<button>').text('Bless Up').attr('id', 'option-2-1')
+    $optionB = $('<button>').text('Bless Down').attr('id', 'option-2-2');
+      $questionsDiv.append($optionA);
+      $questionsDiv.append($optionB);
+    //when option 1 is clicked
+    $('#option-2-1').on('click', () => {
+      totalScore++;
+      questionThree();
+    })
+    //when option 2 is clicked
+    $('#option-2-2').on('click', () => {
+      questionThree();
+    })
+  };
+
+  //question three
+  const questionThree = () => {
+    $('#modal-textbox').empty();
+    $newQuizText = $('<h3>').text('Which phrases below are famous DJ Khaled catchphrases?').css('color', 'black');
+      $('#modal-textbox').append($newQuizText);
+    $question = $('<p>').text('\"Hakuna Matata\" or \"Major Key\"');
+      $('#modal-textbox').append($question);
+    $questionsDiv = $('<div>').addClass('questions-container');
+      $('#modal-textbox').append($questionsDiv);
+    $optionA = $('<button>').text('Hakuna Matata').attr('id', 'option-3-1')
+    $optionB = $('<button>').text('Major Key').attr('id', 'option-3-2');
+      $questionsDiv.append($optionA);
+      $questionsDiv.append($optionB);
+    //when option 1 is clicked
+    $('#option-3-1').on('click', () => {
+      questionFour();
+    })
+    //when option 2 is clicked
+    $('#option-3-2').on('click', () => {
+      totalScore++;
+      questionFour();
+    })
+  };
+
+  //question four
+  const questionFour = () => {
+    $('#modal-textbox').empty();
+    $newQuizText = $('<h3>').text('Which phrases below are famous DJ Khaled catchphrases?').css('color', 'black');
+      $('#modal-textbox').append($newQuizText);
+    $question = $('<p>').text('\"#WinOrLose\" or \"#WeTheBest\"');
+      $('#modal-textbox').append($question);
+    $questionsDiv = $('<div>').addClass('questions-container');
+      $('#modal-textbox').append($questionsDiv);
+    $optionA = $('<button>').text('#WinOrLose').attr('id', 'option-4-1')
+    $optionB = $('<button>').text('#WeTheBest').attr('id', 'option-4-2');
+      $questionsDiv.append($optionA);
+      $questionsDiv.append($optionB);
+    //when option 1 is clicked
+    $('#option-4-1').on('click', () => {
+      questionFive();
+    })
+    //when option 2 is clicked
+    $('#option-4-2').on('click', () => {
+      totalScore++;
+      questionFive();
+    })
   }
 
+  //question five
+  const questionFive = () => {
+    $('#modal-textbox').empty();
+    $newQuizText = $('<h3>').text('Which phrases below are famous DJ Khaled catchphrases?').css('color', 'black');
+      $('#modal-textbox').append($newQuizText);
+    $question = $('<p>').text('\"Win Win Win No Matter What\" or \"I\'ll Never Change\"');
+      $('#modal-textbox').append($question);
+    $questionsDiv = $('<div>').addClass('questions-container');
+      $('#modal-textbox').append($questionsDiv);
+    $optionA = $('<button>').text('Win Win Win No Matter What').attr('id', 'option-5-1')
+    $optionB = $('<button>').text('I\'ll Never Change').attr('id', 'option-5-2');
+      $questionsDiv.append($optionA);
+      $questionsDiv.append($optionB);
+    //when option 1 is clicked
+    $('#option-5-1').on('click', () => {
+      totalScore++;
+      finalScore();
+    })
+    //when option 2 is clicked
+    $('#option-5-2').on('click', () => {
+      finalScore();
+    })
+  }
+
+  //reveals final score of quiz
+  const finalScore = () => {
+    $('#modal-textbox').empty();
+      if(totalScore === 5){
+        $newQuizText = $('<h3>').text('All you do is win, win, win!').css('color', 'black');
+          $('#modal-textbox').append($newQuizText);
+        $finalText = $('<p>').text('You scored 100%, congrats!')
+          $('#modal-textbox').append($finalText);
+      } else if(totalScore === 4){
+        $newQuizText = $('<h3>').text('You almost got  it.').css('color', 'black');
+          $('#modal-textbox').append($newQuizText);
+        $finalText = $('<p>').text('You scored 80%!')
+          $('#modal-textbox').append($finalText);
+      } else if(totalScore === 3){
+        $newQuizText = $('<h3>').text('Better luck next time!').css('color', 'black');
+          $('#modal-textbox').append($newQuizText);
+        $finalText = $('<p>').text('You scored 60%.')
+          $('#modal-textbox').append($finalText);
+      } else  if(totalScore === 2){
+        $newQuizText = $('<h3>').text('Better luck next time!').css('color', 'black');
+          $('#modal-textbox').append($newQuizText);
+        $finalText = $('<p>').text('You scored 40%.')
+          $('#modal-textbox').append($finalText);
+      } else if(totalScore === 1){
+        $newQuizText = $('<h3>').text('Doesn\'t seem like you know our friend DJ Khaled too well.').css('color', 'black');
+          $('#modal-textbox').append($newQuizText);
+        $finalText = $('<p>').text('You scored 20%.')
+          $('#modal-textbox').append($finalText);
+      } else {
+        $newQuizText = $('<h3>').text('Try again next time.').css('color', 'black');
+          $('#modal-textbox').append($newQuizText);
+        $finalText = $('<p>').text('You scored 0%.')
+          $('#modal-textbox').append($finalText);
+      }
+  };
 
 
   //to close MODAL
