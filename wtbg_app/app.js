@@ -71,24 +71,55 @@ $(() => {
     })
   };
 
-//quiz pop-up -- dj khalid catchphrases
-//open modal
-  const openModal = () => {
-    $modal.show();
+  //quiz pop-up -- dj khalid catchphrases
+  //open modal
+    const openModal = () => {
+      $modal.show();
+    }
+    //pops up after 2 seconds on the site -- CHANGE THIS TO 2 MINUTES!
+    setTimeout(openModal, 1000);
+
+    //if user clicks to begin quiz
+  $('#take-quiz-button').on('click', () => {
+    //hide opening text
+    $('.opening-modal-text').remove();
+    beginQuiz();
+  })
+
+  let totalScore = 0;
+
+  const beginQuiz = () => {
+    //replace with new modal text
+    $newQuizText = $('<h3>').text('Which phrases below are famous DJ Khaled catchphrases?').css('color', 'black');
+    $('#modal-textbox').append($newQuizText);
+    showFirstQuestion();
+  };
+
+  const showFirstQuestion = () => {
+    $firstQuestion = $('<p>').text('\"Anotha One\" or \"Roger That\"');
+    $('#modal-textbox').append($firstQuestion);
+    $optionA = $('<button>').text('Anotha One').attr('id', 'option-1-1')
+    $optionB = $('<button>').text('Roger That').attr('id', 'option-1-2');
+    $firstQuestion.append($optionA);
+    $firstQuestion.append($optionB);
+    $('#option-1-1').on('click', () => {
+      console.log('option 1 clicked');
+      totalScore++;
+      questionTwo();
+    })
+
+    $('#option-1-2').on('click', () => {
+      console.log('option 2 clicked');
+        questionTwo();
+    })
+  };
+
+  const questionTwo = () => {
+    console.log('question two')
+    console.log(totalScore);
   }
-  //pops up after 2 seconds on the site -- CHANGE THIS TO 2 MINUTES!
-  setTimeout(openModal, 1000);
 
-  //if user clicks to begin quiz
-$('#take-quiz-button').on('click', () => {
-  //hide opening text
-  $('.opening-modal-text').empty();
-  beginQuiz();
-})
 
-const beginQuiz = () => {
-  
-}
 
   //to close MODAL
   $('#close').on('click', () => {
