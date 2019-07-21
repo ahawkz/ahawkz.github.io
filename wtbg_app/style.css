@@ -105,6 +105,7 @@ img {
   outline: none;
 }
 /* MODAL */
+/* modal styling based on Jerrica's css */
 .modal {
 	background-color: rgba(0, 0, 0, 0.5);
 	position: fixed;
@@ -119,7 +120,8 @@ img {
 
 }
 #modal-textbox {
-	background: white;
+	background: rgb(197,179,88);
+  color: white;
 	padding: 3%;
 	height: 350px;
 	width: 60%;

@@ -87,8 +87,22 @@ $(() => {
     $modal.hide();
   })
 
-  // 'seems like you're really enjoying these gifs. and perhaps you know a thing about DJ Khalid. Shall we test your knowledge?'
+  // modal pop-up
     //if yes, begin quiz
-    //if no, exit modal
+      // clear current text from modal, keep x in top corner
+      //replace with the following text:
+        // "Which phrases below are famous DJK phrases?"
+          // option a
+            // if option a is chosen, add one point to final score
+          // option b
+            // if option b is chosen, add no points to final score
+          // repeat this 4 more times
+        // if final score = 5, user gets 100%
+          // if final score = 4, user gets 80%
+          // if final score = 3, user gets 60%
+          // if final score = 2, user gets 40%
+          // if final score = 1, user gets 20%
+          // if final score = 0, sorry, looks like  you don't know a thing about DJ K!
+    //if no, click x to exit modal
 
 }); //end window on-load
