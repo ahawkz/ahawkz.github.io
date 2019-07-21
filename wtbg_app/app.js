@@ -71,6 +71,10 @@ $(() => {
     })
   };
 
+  //////////
+  // QUIZ
+  //////////
+
   //quiz pop-up -- dj khalid catchphrases
   //open modal
     const openModal = () => {
@@ -98,10 +102,12 @@ $(() => {
   const showFirstQuestion = () => {
     $firstQuestion = $('<p>').text('\"Anotha One\" or \"Roger That\"');
     $('#modal-textbox').append($firstQuestion);
+    $questionsDiv = $('<div>').addClass('questions-container');
+    $('#modal-textbox').append($questionsDiv);
     $optionA = $('<button>').text('Anotha One').attr('id', 'option-1-1')
     $optionB = $('<button>').text('Roger That').attr('id', 'option-1-2');
-    $firstQuestion.append($optionA);
-    $firstQuestion.append($optionB);
+    $questionsDiv.append($optionA);
+    $questionsDiv.append($optionB);
     $('#option-1-1').on('click', () => {
       console.log('option 1 clicked');
       totalScore++;
@@ -115,6 +121,7 @@ $(() => {
   };
 
   const questionTwo = () => {
+    $('.opening-modal-text').remove();
     console.log('question two')
     console.log(totalScore);
   }
