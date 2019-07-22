@@ -1,13 +1,13 @@
 # We The Best Gifs
 
-We The Best Gifs is a celebrity-themed (DJ Khaled) gif generator that takes user input and displays up to 30 gifs based on that user's insput. After about two minutes on the site, users will be prompted to take a quiz, testing their knowledge of DJ Khaled. 
+We The Best Gifs is a celebrity(DJ Khaled)-themed gif generator that takes user input and displays up to 30 gifs based on that user's insput. Or, if no usr input is given, the app will generate 30 DJ Khaled gifs. After about two minutes on the site, users will be prompted to take a quiz, testing their knowledge of DJ Khaled. 
 
 ## Live Link to Site
 https://ahawkz.github.io/wtbg_app/index.html
 
 ## Built With
 
-* [Giphy API](hhttps://developers.giphy.com/)
+* [Giphy API](https://developers.giphy.com/)
 * [JQuery 3.4.1]
 * [HTML]
 * [CSS]
@@ -20,7 +20,3 @@ https://ahawkz.github.io/wtbg_app/index.html
 
 * There is currently no method in place to download the gifs for immediate use. 
 * The user cannot save gifs to a database. 
-
-## Acknowledgments
-
-* Thanks to Jerrica for showing us how to build modals, whose morning exercise code was used as an inspiration to build this app's modal pop-up.
