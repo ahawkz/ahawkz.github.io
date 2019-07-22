@@ -18,7 +18,7 @@ h1 {
   background: -webkit-linear-gradient(#eee, #3e9ab2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  /* gradient code inspired by W3S */
+  /* gradient code inspired by W3Schools */
 }
 p {
   display: inline-block;
@@ -45,7 +45,6 @@ input {
   text-align: center;
   display: inline-block;
   cursor: grab;
-  /* animation */
 }
 #gif-me:hover {
   background-color: #9cb4ba;
@@ -65,8 +64,6 @@ input {
   border: 2px solid #3e9ab2;
   border-radius: 5px;
   margin: 50px auto;
-  /* width: 70%;
-  height: 750px; */
   background-color: #f0f1f2;
 }
 /* giphy container */
@@ -104,7 +101,7 @@ img {
   outline: none;
 }
 /* MODAL */
-/* modal styling based on Jerrica's css */
+    /* modal styling based on Jerrica's modal css */
 .modal {
 	background-color: rgba(0, 0, 0, 0.5);
 	position: fixed;
@@ -116,7 +113,6 @@ img {
 	overflow: auto;
   display: flex;
   justify-content: center;
-
 }
 #modal-textbox {
 	background: rgb(197,179,88);
@@ -161,6 +157,19 @@ img {
   cursor: grab;
 }
 #option-1 {
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  color: black;
+  background-color: #9cb4ba;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px gray;
+  cursor: grab;
+  margin: 5px;
+}
+#option-2 {
+  font-family: 'Montserrat', sans-serif;
   text-decoration: none;
   color: black;
   background-color: #9cb4ba;
@@ -172,17 +181,6 @@ img {
   margin: 5px;
 }
 
-#option-2 {
-  text-decoration: none;
-  color: black;
-  background-color: #9cb4ba;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  box-shadow: 1px 1px 4px gray;
-  cursor: grab;
-  margin: 5px;
-}
 /* FOOTER */
 footer {
   font-size: 12px;

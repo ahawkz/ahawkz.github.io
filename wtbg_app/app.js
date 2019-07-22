@@ -86,7 +86,7 @@ $(() => {
     $('.modal').show();
   }
 
-  //pops up after 5 seconds on the site
+  //pops up after 2 minutes on the site
   setTimeout(openModal, 125000);
 
   //if user clicks to begin quiz
