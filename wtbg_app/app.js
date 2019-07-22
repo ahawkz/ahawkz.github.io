@@ -20,7 +20,6 @@ $(() => {
     $buttonContainer.empty();
     giphyArray = [];
     console.log(giphyArray);
-    // $giphyContainer.children().eq(0).show();
 
      //user input stored in variable
     let userInput = $('input[type="text"]').val();
@@ -82,13 +81,12 @@ $(() => {
   let totalScore = 0;
   $('.modal').hide();
 
-  // WHY IS THIS POPPING UP RIGHT AWAY?
   //open modal
   const openModal = () => {
     $('.modal').show();
   }
 
-  //pops up after 5 seconds on the site -- CHANGE THIS TO 2 MINUTES!
+  //pops up after 5 seconds on the site
   setTimeout(openModal, 125000);
 
   //if user clicks to begin quiz
@@ -241,7 +239,7 @@ $(() => {
           $('#modal-textbox').append($newQuizText);
         $finalText = $('<p>').text('You scored 60%.')
           $('#modal-textbox').append($finalText);
-      } else  if(totalScore === 2){
+      } else if(totalScore === 2){
         $newQuizText = $('<h3>').text('Better luck next time!').css('color', 'black');
           $('#modal-textbox').append($newQuizText);
         $finalText = $('<p>').text('You scored 40%.')
