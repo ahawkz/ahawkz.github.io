@@ -19,7 +19,6 @@ $(() => {
     $('img').remove();
     $buttonContainer.empty();
     giphyArray = [];
-    console.log(giphyArray);
 
      //user input stored in variable
     let userInput = $('input[type="text"]').val();
@@ -87,7 +86,7 @@ $(() => {
   }
 
   //pops up after 2 minutes on the site
-  setTimeout(openModal, 125000);
+  setTimeout(openModal, 10000);
 
   //if user clicks to begin quiz
   $('#take-quiz-button').on('click', () => {
