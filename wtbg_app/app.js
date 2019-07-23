@@ -22,7 +22,7 @@ $(() => {
 
      //user input stored in variable
     let userInput = $('input[type="text"]').val();
-    //ajax call
+    //api call
     if (userInput == '') {
       //pulls dj khaled gifs
       var xhr = $.get("https://api.giphy.com/v1/gifs/search?q=DJ+KHALED&api_key=4F8CbsHhFuP1xZW9n4KwCrPEz4uCS9x0&rating=pg13&limit=30");
@@ -54,7 +54,7 @@ $(() => {
   }); //end listener
 
 
-  //shows first image in result, appends next button
+  //appends next button, allows user to click through carousel
   const showImage = () => {
     let currentGifIndex = 0;
     let $currentGif = giphyArray[currentGifIndex];
@@ -86,7 +86,7 @@ $(() => {
   }
 
   //pops up after 2 minutes on the site
-  setTimeout(openModal, 10000);
+  setTimeout(openModal, 5000);
 
   //if user clicks to begin quiz
   $('#take-quiz-button').on('click', () => {
